@@ -69,6 +69,27 @@ Memory: 15.99 GB Total, 7.19 GB Available
 | ToFrozenDictionary | .NET 10.0 | 89.45 μs |  1.00 | 347.18 KB |        1.00 |
 | ToFrozenDictionary | .NET 11.0 | 31.79 μs |  0.36 | 127.16 KB |        0.37 |
 
+## JsonBenchmarks.cs
+
+Source: `Dotnet11Benchmarks\Dotnet11Benchmarks\bin\Release\net10.0\BenchmarkDotNet.Artifacts\results\DotnetBenchmarks.JsonBenchmarks-report-github.md`
+
+BenchmarkDotNet v0.16.0-preview.2, Windows 10 (10.0.17763.9376/1809/October2018Update/Redstone5) (Hyper-V)  
+AMD EPYC 7763 2.44GHz, 1 CPU, 4 logical and 2 physical cores  
+Memory: 15.99 GB Total, 6.94 GB Available  
+.NET SDK 11.0.100-rc.3.26522.148
+
+- Host: .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+- .NET 10 job: .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+- .NET 11 job: .NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348), X64 RyuJIT x86-64-v3
+
+| Method                 | Runtime   | Mean      | Ratio | Allocated | Alloc Ratio |
+|----------------------- |---------- |----------:|------:|----------:|------------:|
+| SerializeEscapedString | .NET 10.0 | 18.323 μs |  1.00 |  12.03 KB |        1.00 |
+| SerializeEscapedString | .NET 11.0 |  8.499 μs |  0.46 |  12.03 KB |        1.00 |
+|                        |           |           |       |           |             |
+| SerializeHtmlString    | .NET 10.0 | 10.179 μs |  1.00 |   3.74 KB |        1.00 |
+| SerializeHtmlString    | .NET 11.0 |  6.478 μs |  0.64 |   3.74 KB |        1.00 |
+
 ## RegexBenchmarks.cs
 
 Source: `Dotnet11Benchmarks\Dotnet11Benchmarks\bin\Release\net10.0\BenchmarkDotNet.Artifacts\results\DotnetBenchmarks.RegexBenchmarks-report-github.md`
