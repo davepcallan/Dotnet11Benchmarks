@@ -69,6 +69,39 @@ Memory: 15.99 GB Total, 7.19 GB Available
 | ToFrozenDictionary | .NET 10.0 | 89.45 μs |  1.00 | 347.18 KB |        1.00 |
 | ToFrozenDictionary | .NET 11.0 | 31.79 μs |  0.36 | 127.16 KB |        0.37 |
 
+## JitBenchmarks.cs
+
+Source: `Dotnet11Benchmarks\Dotnet11Benchmarks\bin\Release\net10.0\BenchmarkDotNet.Artifacts\results\DotnetBenchmarks.JitBenchmarks-report-github.md`
+
+BenchmarkDotNet v0.16.0-preview.2, Windows 10 (10.0.17763.9376/1809/October2018Update/Redstone5) (Hyper-V)  
+AMD EPYC 7763 2.44GHz, 1 CPU, 4 logical and 2 physical cores  
+Memory: 15.99 GB Total, 5.66 GB Available  
+.NET SDK 11.0.100-rc.3.26522.148
+
+- Host: .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+- .NET 10 job: .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+- .NET 11 job: .NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348), X64 RyuJIT x86-64-v3
+
+| Method                        | Runtime   | Mean      | Ratio | Allocated | Alloc Ratio |
+|------------------------------ |---------- |----------:|------:|----------:|------------:|
+| BoxNullableNull               | .NET 10.0 |  4.165 ns |  1.00 |         - |          NA |
+| BoxNullableNull               | .NET 11.0 |  2.421 ns |  0.58 |         - |          NA |
+|                               |           |           |       |           |             |
+| BoxNullableValue              | .NET 10.0 | 19.644 ns |  1.00 |      24 B |        1.00 |
+| BoxNullableValue              | .NET 11.0 |  6.843 ns |  0.35 |      24 B |        1.00 |
+|                               |           |           |       |           |             |
+| FormatNullableInt             | .NET 10.0 | 21.620 ns |  1.00 |      24 B |        1.00 |
+| FormatNullableInt             | .NET 11.0 |  4.045 ns |  0.19 |         - |        0.00 |
+|                               |           |           |       |           |             |
+| EqualityComparerDefaultEquals | .NET 10.0 |  6.560 ns |  1.00 |      24 B |        1.00 |
+| EqualityComparerDefaultEquals | .NET 11.0 |  2.817 ns |  0.43 |         - |        0.00 |
+|                               |           |           |       |           |             |
+| DelegateEquals                | .NET 10.0 |  8.906 ns |  1.00 |         - |          NA |
+| DelegateEquals                | .NET 11.0 |  6.662 ns |  0.75 |         - |          NA |
+|                               |           |           |       |           |             |
+| DelegateGetHashCode           | .NET 10.0 | 12.915 ns |  1.00 |         - |          NA |
+| DelegateGetHashCode           | .NET 11.0 | 10.696 ns |  0.83 |         - |          NA |
+
 ## JsonBenchmarks.cs
 
 Source: `Dotnet11Benchmarks\Dotnet11Benchmarks\bin\Release\net10.0\BenchmarkDotNet.Artifacts\results\DotnetBenchmarks.JsonBenchmarks-report-github.md`
@@ -89,6 +122,27 @@ Memory: 15.99 GB Total, 6.94 GB Available
 |                        |           |           |       |           |             |
 | SerializeHtmlString    | .NET 10.0 | 10.179 μs |  1.00 |   3.74 KB |        1.00 |
 | SerializeHtmlString    | .NET 11.0 |  6.478 μs |  0.64 |   3.74 KB |        1.00 |
+
+## NumericsBenchmarks.cs
+
+Source: `Dotnet11Benchmarks\Dotnet11Benchmarks\bin\Release\net10.0\BenchmarkDotNet.Artifacts\results\DotnetBenchmarks.NumericsBenchmarks-report-github.md`
+
+BenchmarkDotNet v0.16.0-preview.2, Windows 10 (10.0.17763.9376/1809/October2018Update/Redstone5) (Hyper-V)  
+AMD EPYC 7763 2.44GHz, 1 CPU, 4 logical and 2 physical cores  
+Memory: 15.99 GB Total, 5.66 GB Available  
+.NET SDK 11.0.100-rc.3.26522.148
+
+- Host: .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+- .NET 10 job: .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+- .NET 11 job: .NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348), X64 RyuJIT x86-64-v3
+
+| Method                  | Runtime   | Mean      | Ratio | Allocated | Alloc Ratio |
+|------------------------ |---------- |----------:|------:|----------:|------------:|
+| DoubleParseLongFraction | .NET 10.0 | 12.423 μs |  1.00 |         - |          NA |
+| DoubleParseLongFraction | .NET 11.0 |  7.042 μs |  0.57 |         - |          NA |
+|                         |           |           |       |           |             |
+| RandomNext              | .NET 10.0 |  9.050 μs |  1.00 |         - |          NA |
+| RandomNext              | .NET 11.0 |  5.513 μs |  0.61 |         - |          NA |
 
 ## RegexBenchmarks.cs
 
@@ -161,3 +215,52 @@ Memory: 15.99 GB Total, 7.19 GB Available
 |                        |           |               |       |           |             |
 | SpanSortStructComparer | .NET 10.0 | 15,196.708 ns |  1.00 |      88 B |        1.00 |
 | SpanSortStructComparer | .NET 11.0 |  2,751.157 ns |  0.18 |         - |        0.00 |
+
+## StringBenchmarks.cs
+
+Source: `Dotnet11Benchmarks\Dotnet11Benchmarks\bin\Release\net10.0\BenchmarkDotNet.Artifacts\results\DotnetBenchmarks.StringBenchmarks-report-github.md`
+
+BenchmarkDotNet v0.16.0-preview.2, Windows 10 (10.0.17763.9376/1809/October2018Update/Redstone5) (Hyper-V)  
+AMD EPYC 7763 2.44GHz, 1 CPU, 4 logical and 2 physical cores  
+Memory: 15.99 GB Total, 5.66 GB Available  
+.NET SDK 11.0.100-rc.3.26522.148  
+Gen0=0.3357  
+
+- Host: .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+- .NET 10 job: .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+- .NET 11 job: .NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348), X64 RyuJIT x86-64-v3
+
+| Method      | Runtime   | Mean      | Ratio | Allocated | Alloc Ratio |
+|------------ |---------- |----------:|------:|----------:|------------:|
+| ConcatArray | .NET 10.0 |  9.643 μs |  1.00 |    5.7 KB |        1.00 |
+| ConcatArray | .NET 11.0 |  9.222 μs |  0.96 |   5.67 KB |        0.99 |
+|             |           |           |       |           |             |
+| ConcatList  | .NET 10.0 | 10.928 μs |  1.00 |   5.71 KB |        1.00 |
+| ConcatList  | .NET 11.0 |  8.546 μs |  0.78 |   5.67 KB |        0.99 |
+
+## UriBenchmarks.cs
+
+Source: `Dotnet11Benchmarks\Dotnet11Benchmarks\bin\Release\net10.0\BenchmarkDotNet.Artifacts\results\DotnetBenchmarks.UriBenchmarks-report-github.md`
+
+BenchmarkDotNet v0.16.0-preview.2, Windows 10 (10.0.17763.9376/1809/October2018Update/Redstone5) (Hyper-V)  
+AMD EPYC 7763 2.44GHz, 1 CPU, 4 logical and 2 physical cores  
+Memory: 15.99 GB Total, 6.56 GB Available  
+.NET SDK 11.0.100-rc.3.26522.148
+
+- Host: .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+- .NET 10 job: .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+- .NET 11 job: .NET 11.0.0 (11.0.0-rc.3.26522.148, 11.0.26.52348), X64 RyuJIT x86-64-v3
+
+| Method                   | Runtime   | Mean        | Ratio | Allocated | Alloc Ratio |
+|------------------------- |---------- |------------:|------:|----------:|------------:|
+| ParseApiAddress          | .NET 10.0 |   117.45 ns |  1.00 |      56 B |        1.00 |
+| ParseApiAddress          | .NET 11.0 |    96.85 ns |  0.82 |      56 B |        1.00 |
+|                          |           |             |       |           |             |
+| ParseLongHost            | .NET 10.0 |   545.28 ns |  1.00 |      56 B |        1.00 |
+| ParseLongHost            | .NET 11.0 |   216.86 ns |  0.40 |      56 B |        1.00 |
+|                          |           |             |       |           |             |
+| ParseEscapedAscii        | .NET 10.0 |   889.71 ns |  1.00 |     448 B |        1.00 |
+| ParseEscapedAscii        | .NET 11.0 |   539.72 ns |  0.61 |     368 B |        0.82 |
+|                          |           |             |       |           |             |
+| ParseWithUnicodeFragment | .NET 10.0 | 1,085.37 ns |  1.00 |     936 B |        1.00 |
+| ParseWithUnicodeFragment | .NET 11.0 |   669.60 ns |  0.62 |     432 B |        0.46 |
