@@ -241,8 +241,7 @@ Source: `Dotnet11Benchmarks\Dotnet11Benchmarks\bin\Release\net10.0\BenchmarkDotN
 BenchmarkDotNet v0.16.0-preview.2, Windows 10 (10.0.17763.9376/1809/October2018Update/Redstone5) (Hyper-V)  
 AMD EPYC 7763 2.44GHz, 1 CPU, 4 logical and 2 physical cores  
 Memory: 15.99 GB Total, 5.66 GB Available  
-.NET SDK 11.0.100-rc.3.26522.148  
-Gen0=0.3357  
+.NET SDK 11.0.100-rc.3.26522.148
 
 - Host: .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
 - .NET 10 job: .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
