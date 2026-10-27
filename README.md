@@ -1,5 +1,16 @@
 # BenchmarkDotNet Results
 
+## About these benchmarks
+
+This repository contains selected variations of the benchmarks featured in [Performance Improvements in .NET 11](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-11/). They compare .NET 10 with .NET 11 RC3.
+
+## Running the benchmarks
+
+In Visual Studio, set the build configuration to **Release**, then choose **Start Without Debugging** (Ctrl+F5). When prompted, select which benchmarks you want to run.
+
+<br>
+<br>
+
 ## <a href="Dotnet11Benchmarks/CollectionBenchmarks.cs" target="_blank" rel="noopener noreferrer">CollectionBenchmarks.cs</a>
 
 Source: `Dotnet11Benchmarks\Dotnet11Benchmarks\bin\Release\net10.0\BenchmarkDotNet.Artifacts\results\DotnetBenchmarks.CollectionBenchmarks-report-github.md`
